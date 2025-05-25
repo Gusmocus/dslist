@@ -29,10 +29,11 @@ public class Game {
 	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	
-	//contrutor
-	public Game(long id, String title, int year, String genre, String platforms, double score, String imgUrl,
+	//contrutores
+	public Game() {	
+	}
+	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
 			String shortDescription, String longDescription) {
-		super();
 		this.id = id;
 		this.title = title;
 		this.year = year;
@@ -43,13 +44,12 @@ public class Game {
 		this.shortDescription = shortDescription;
 		this.longDescription = longDescription;
 	}
-
 	//getter e setters
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -61,11 +61,11 @@ public class Game {
 		this.title = title;
 	}
 
-	public int getYear() {
+	public Integer getYear() {
 		return year;
 	}
 
-	public void setYear(int year) {
+	public void setYear(Integer year) {
 		this.year = year;
 	}
 
@@ -85,11 +85,11 @@ public class Game {
 		this.platforms = platforms;
 	}
 
-	public double getScore() {
+	public Double getScore() {
 		return score;
 	}
 
-	public void setScore(double score) {
+	public void setScore(Double score) {
 		this.score = score;
 	}
 
