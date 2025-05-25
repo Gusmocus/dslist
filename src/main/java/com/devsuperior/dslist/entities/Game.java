@@ -19,22 +19,25 @@ public class Game {
 	
 	@Column(name = "game_year")
 	private Integer year;
-	private String gender;
-	private String plataform;
+	private String genre;
+	private String platforms;
 	private Double score;
 	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	
 	//contrutor
-	public Game(long id, String title, int year, String gender, String plataform, double score, String imgUrl,
+	public Game(long id, String title, int year, String genre, String platforms, double score, String imgUrl,
 			String shortDescription, String longDescription) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.year = year;
-		this.gender = gender;
-		this.plataform = plataform;
+		this.genre = genre;
+		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
@@ -66,20 +69,20 @@ public class Game {
 		this.year = year;
 	}
 
-	public String getGender() {
-		return gender;
+	public String getGenre() {
+		return genre;
 	}
 
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setGenre(String genre) {
+		this.genre = genre;
 	}
 
-	public String getPlataform() {
-		return plataform;
+	public String getPlatforms() {
+		return platforms;
 	}
 
-	public void setPlataform(String plataform) {
-		this.plataform = plataform;
+	public void setPlatforms(String platforms) {
+		this.platforms = platforms;
 	}
 
 	public double getScore() {
